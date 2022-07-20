@@ -1,0 +1,43 @@
+{% extends "shop/base.html" %}
+{% block content %}
+{%load static%}
+<div class="box">
+  <link rel='stylesheet'  href="{%  static 'css/login.css' %}" >
+
+    <h2>Login</h2>
+   
+    <form  action="" method="POST">
+      
+      <!-- Login -->
+      
+      
+       {% csrf_token %} 
+       <label for="username">Username</label>
+        <input type="text" name="username" id="username" placeholder="Username">
+       
+
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" placeholder="Password">
+         
+      
+      <!-- 
+        Register -->
+      
+      
+      
+      <!-- Submit -->
+      {{form.errors}}
+      <input type="submit" id="submit" value="Login">
+     
+      <!-- Help -->
+      
+      <a href="#" class="forgot-password" title="Forgot password?">Forgot?</a>
+      <a href="login" class="Register" title="Inscription">Inscription</a>
+
+    </form>
+  </div>
+  {%endblock%}
+  {%block js%}
+
+
+{%endblock%}

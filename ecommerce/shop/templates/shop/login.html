@@ -1,0 +1,58 @@
+{% extends "shop/base.html" %}
+{% block content %}
+{%load static%}
+
+<div class="box">
+  <link rel='stylesheet'  href="{%  static 'css/login.css' %}" >
+
+    <h2>Inscription</h2>
+   
+    <form  action="" method="POST">
+      
+      <!-- Login -->
+      
+      
+       {% csrf_token %} 
+        {{form.username.label}}
+        {{form.username}}
+        {{form.email.label}}
+        {{form.email}}
+        {{form.tel.label}}
+        {{form.tel}}
+        {{form.adress.label}}
+        {{form.adress}}
+
+        {{form.password1.label}}
+        {{form.password1}}
+        {{form.password2.label}}
+        {{form.password2}}
+      <!--  <label for="username">Username</label>
+        <input type="text" name="username" id="username" placeholder="Username">
+        <label for="Email">Email</label>
+        <input type="Email" name="Email" id="Email" placeholder="Email">
+        <label for="Tel">Tel</label>
+        <input type="number" name="Tel" id="Tel" placeholder="Tel">
+
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" placeholder="Password">
+         -->
+      
+      <!-- 
+        Register -->
+      
+      
+      
+      <!-- Submit -->
+      {{form.errors}}
+      <input type="submit" id="submit" value="Login">
+     
+     
+      
+      
+    </form>
+  </div>
+  {%endblock%}
+  {%block js%}
+
+
+{%endblock%}
